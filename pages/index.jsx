@@ -10,10 +10,9 @@ import {
   Select,
   Snackbar,
 } from "@mui/material";
-import Link from "next/link";
 import { useEffect, useState } from "react";
 import { Card, CardContent, CardMedia, Footer, Header } from "../components";
-import HeartIcon from "../components/Icons/Heart";
+import HeartIcon from "../components/Icons/HeartIcon";
 import { zero_pad } from "../utilities";
 
 export default function Home() {
@@ -129,13 +128,12 @@ export default function Home() {
                     <div className='text-md text-gray-400'>
                       <i>#{zero_pad(id ?? "", 4)}</i>
                     </div>
-                    <div className='mt-2 text-3xl font-handwritten'>
+                    <div className='mt-2 text-sm md:text-lg lg:text-3xl font-handwritten'>
                       {capitalize(p?.name)}
                     </div>
                   </div>
                   <div>
                     <HeartIcon
-                      size={7}
                       solid={favourites.includes(id)}
                       customClickEvent={() => handleFavourites(id, p?.name)}
                     />

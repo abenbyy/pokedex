@@ -18,7 +18,7 @@ import {
   TableRow,
   Paper,
 } from "@mui/material";
-import HeartIcon from "../../components/Icons/Heart";
+import HeartIcon from "../../components/Icons/HeartIcon";
 
 export default function PokemonDetail() {
   const router = useRouter();
@@ -133,7 +133,6 @@ export default function PokemonDetail() {
               <div className='mt-5'>
                 <HeartIcon
                   solid={favourites.includes(pokemon?.id)}
-                  size={7}
                   customClickEvent={() =>
                     handleFavourites(pokemon?.id, pokemon?.name)
                   }
