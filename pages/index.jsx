@@ -117,6 +117,7 @@ export default function Home() {
             return (
               <Card href={`/pokemon/${id}`} key={id}>
                 <CardMedia
+                  href={`/pokemon/${id}`}
                   className='w-full h-auto object-cover max-w-img'
                   src={`https://assets.pokemon.com/assets/cms2/img/pokedex/detail/${zero_pad(
                     id,

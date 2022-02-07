@@ -6,7 +6,7 @@ export default function HeartIcon(props) {
       <svg
         onClick={customClickEvent}
         xmlns='http://www.w3.org/2000/svg'
-        className={`h-8 w-8 text-rose-600`}
+        className={`h-8 w-8 text-rose-600 z-20 cursor-pointer`}
         viewBox='0 0 20 20'
         fill='currentColor'>
         <path
@@ -21,7 +21,7 @@ export default function HeartIcon(props) {
       <svg
         onClick={customClickEvent}
         xmlns='http://www.w3.org/2000/svg'
-        className={`h-8 w-8`}
+        className={`h-8 w-8 z-20 cursor-pointer`}
         fill='none'
         viewBox='0 0 24 24'
         stroke='currentColor'>

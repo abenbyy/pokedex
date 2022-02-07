@@ -1,9 +1,12 @@
 export default function CardMedia(props) {
-  const { className, src, style } = props;
-
+  const { className, src, style, href } = props;
+  const handleHref = () => {
+    window.location = href;
+  };
   return (
     <img
-      className={` ${className}`}
+      onClick={handleHref}
+      className={`cursor-pointer ${className}`}
       style={style}
       src={src}
       alt='pokemon image'
