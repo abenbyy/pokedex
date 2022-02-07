@@ -11,6 +11,8 @@ module.exports = {
     },
     maxWidth: {
       img: "282px",
+      "img-lg": "424px",
+      chip: "64px",
     },
   },
   plugins: [],

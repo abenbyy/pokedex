@@ -10,8 +10,9 @@ import {
   Select,
   Snackbar,
 } from "@mui/material";
+import Link from "next/link";
 import { useEffect, useState } from "react";
-import { Card, CardContent, CardMedia } from "../components";
+import { Card, CardContent, CardMedia, Footer, Header } from "../components";
 import HeartIcon from "../components/Icons/Heart";
 import { zero_pad } from "../utilities";
 
@@ -94,6 +95,7 @@ export default function Home() {
 
   return (
     <div className='min-h-screen min-w-screen bg-gray-100'>
+      <Header />
       <Backdrop
         sx={{ color: "#fff", zIndex: (theme) => theme.zIndex.drawer + 1 }}
         open={backdropOpen}
@@ -114,10 +116,13 @@ export default function Home() {
           {pokemons?.map((p, i) => {
             const id = (page - 1) * limit + i + 1;
             return (
-              <Card key={i}>
+              <Card href={`/pokemon/${id}`} key={id}>
                 <CardMedia
                   className='w-full h-auto object-cover max-w-img'
-                  src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${id}.png`}
+                  src={`https://assets.pokemon.com/assets/cms2/img/pokedex/detail/${zero_pad(
+                    id,
+                    3
+                  )}.png`}
                 />
                 <CardContent>
                   <div>
@@ -130,6 +135,7 @@ export default function Home() {
                   </div>
                   <div>
                     <HeartIcon
+                      size={7}
                       solid={favourites.includes(id)}
                       customClickEvent={() => handleFavourites(id, p?.name)}
                     />
@@ -166,6 +172,7 @@ export default function Home() {
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   );
 }

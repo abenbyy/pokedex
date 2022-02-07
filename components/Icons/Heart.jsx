@@ -1,12 +1,12 @@
 export default function HeartIcon(props) {
-  const { solid, customClickEvent } = props;
+  const { solid, customClickEvent, size } = props;
 
   if (solid) {
     return (
       <svg
         onClick={customClickEvent}
         xmlns='http://www.w3.org/2000/svg'
-        className='h-7 w-7 text-rose-600'
+        className={`h-${size} w-${size} text-rose-600`}
         viewBox='0 0 20 20'
         fill='currentColor'>
         <path
@@ -21,7 +21,7 @@ export default function HeartIcon(props) {
       <svg
         onClick={customClickEvent}
         xmlns='http://www.w3.org/2000/svg'
-        className='h-7 w-7'
+        className={`h-${size} w-${size}`}
         fill='none'
         viewBox='0 0 24 24'
         stroke='currentColor'>

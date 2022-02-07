@@ -1,4 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Kalam:wght@700&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 html,
 body {
@@ -22,6 +25,66 @@ a {
   font-family: "Kalam", cursive;
 }
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+.MuiTableCell-head {
+  background-color: #2374c5;
+  color: white;
+}
+
+.bg-blue-soft {
+  background-color: #2374c5;
+}
+
+.grass {
+  background-color: #78c84f;
+}
+.poison {
+  background-color: #a040a1;
+}
+.fire {
+  background-color: #f27d24;
+}
+.normal {
+  background-color: #a9a878;
+}
+.water {
+  background-color: #6890f0;
+}
+.electric {
+  background-color: #f8d030;
+}
+.ice {
+  background-color: #98d8d8;
+}
+.fighting {
+  background-color: #c03028;
+}
+.ground {
+  background-color: #e0c069;
+}
+.flying {
+  background-color: #a890ef;
+}
+.psychic {
+  background-color: #f85888;
+}
+.bug {
+  background-color: #a8b821;
+}
+.rock {
+  background-color: #b7a038;
+}
+.ghost {
+  background-color: #705798;
+}
+.dark {
+  background-color: #705848;
+}
+.dragon {
+  background-color: #7038fa;
+}
+.steel {
+  background-color: #b8b8d0;
+}
+.fairy {
+  background-color: #f1b6bc;
+}
